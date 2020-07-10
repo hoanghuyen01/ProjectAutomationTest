@@ -5,6 +5,7 @@ import org.testng.annotations.BeforeTest;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
+import io.qameta.allure.Description;
 import pages.SignUpPage;;
 
 public class SignUpTest extends BaseTest {
@@ -15,6 +16,7 @@ public class SignUpTest extends BaseTest {
 		signUpPage = new SignUpPage(driver);
 	}
 	@Test(dataProvider = "data_test_Account")
+	@Description("Test that form signup with required fields: customers miss required input whether error message occur")
 	public void checkRequiredForm(String firstName,String lastName,String email,String pass,String confirmPass) {
 		signUpPage.open();
 		signUpPage.fillDataForm(firstName, lastName, email, pass, confirmPass);

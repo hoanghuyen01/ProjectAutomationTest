@@ -5,6 +5,7 @@ import org.testng.annotations.BeforeTest;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
+import io.qameta.allure.Description;
 import pages.HomePage;
 import pages.SignInPage;
 
@@ -17,6 +18,7 @@ public class LogoutTest extends BaseTest{
 		signInPage = new SignInPage(driver);
 	}
 	@Test (dataProvider = "data_test_valid_Account")
+	@Description("Test that customer can login in system")
 	public void canLogin(String email, String pass) {
 		homePage.open().clickOnSignIn();
 		signInPage.login(email, pass);
@@ -24,6 +26,7 @@ public class LogoutTest extends BaseTest{
 	}
 	
 	@Test
+	@Description("Test that customer can log out system")
 	public void logout() {
 		if(signInPage.existWelcomeButton()) {	
 			Assert.assertEquals(signInPage.checkout(),true);

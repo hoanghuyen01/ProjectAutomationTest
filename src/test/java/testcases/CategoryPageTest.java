@@ -28,7 +28,7 @@ public class CategoryPageTest extends BaseTest{
 		homePage = new HomePage(driver);
 		signInPage = new SignInPage(driver);
 	}
-	@Test
+	@Test(priority = 1)
 	@Description("Test sorting product follow by price DESC")
 	public void testSortingDes() {
 		categoryPage.open();
@@ -38,7 +38,7 @@ public class CategoryPageTest extends BaseTest{
 		listPrices = categoryPage.getPriceListOfCategory(listPrices);
 		Assert.assertEquals(categoryPage.comparePriceDesc(listPrices),true);
 	}
-	@Test 
+	@Test (priority = 2)
 	@Description("Test sorting product follow by price DESC")
 	public void tetSortingAcs() {
 		categoryPage.open();
@@ -48,8 +48,8 @@ public class CategoryPageTest extends BaseTest{
 		listPrices = categoryPage.getPriceListOfCategory(listPrices);
 		Assert.assertEquals(categoryPage.comparePriceAcs(listPrices),true);
 	}
-//	@Test(dataProvider = "product_name")
-//	@Description("Test adding products to compare")
+	@Test(dataProvider = "product_name", priority = 3)
+	@Description("Test adding products to compare")
 	public void testAddProductCompare(String nameProduct) {
 		categoryPage.open();
 		System.out.println(nameProduct);
@@ -57,7 +57,7 @@ public class CategoryPageTest extends BaseTest{
 		Assert.assertEquals(categoryPage.checkExistProductOnCompareList(),String.format(MESSAGE_SUCCESS_COMPARISON_LIST, nameProduct));
 		Assert.assertEquals(categoryPage.nameProductOnCompareList(nameProduct),true);
 	}
-	@Test(dataProvider = "product_wishlist")
+	@Test(dataProvider = "product_wishlist", priority = 4)
 	@Description("Testing adding products to wishlist")
 	public void testAddProductWishList(String email, String pass ,String nameProduct) {
 		homePage.open().clickOnSignIn();
@@ -68,7 +68,7 @@ public class CategoryPageTest extends BaseTest{
 		captureScreenshot(nameProduct);
 		Assert.assertEquals(categoryPage.nameProductOnWishList(nameProduct),true);
 	}
-	@Test(dataProvider = "product_name")
+	@Test(dataProvider = "product_name", priority = 5)
 	@Description("Testing add product with option : Color-Black Size-S")
 	public void addProductWithOptions(String nameProduct) {
 		categoryPage.open();
@@ -78,8 +78,8 @@ public class CategoryPageTest extends BaseTest{
 		Assert.assertEquals(categoryPage.addSuccessToCart(),String.format(XPATH_MESSAGE_SUCCESS_ADD_TO_CART, nameProduct));
 		
 	}
-//	@Test
-//	@Description("Combine filter  Size:S - Color: Black - Price:60-69.99")
+	@Test(priority = 6)
+	@Description("Combine filter  Size:S - Color: Black - Price:60-69.99")
 	public void combineFilter() {
 		categoryPage.open();
 		categoryPage.filterSizeS();

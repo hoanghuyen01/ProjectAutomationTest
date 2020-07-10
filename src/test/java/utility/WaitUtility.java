@@ -8,7 +8,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 public class WaitUtility {
 
     WebDriver driver;
-    int WAITING_TIME = 60;
+    int WAITING_TIME = 100;
 
     public WaitUtility(WebDriver driver) {
         this.driver = driver;

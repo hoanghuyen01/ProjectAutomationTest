@@ -6,7 +6,7 @@ import org.openqa.selenium.WebDriver;
 import base.BasePage;
 
 public class CheckoutPage extends BasePage{
-	String SHIPPING_METHODS = "//input[@value = 'tablerate_bestway']";
+	String SHIPPING_METHODS = "//input[@value = 'flatrate_flatrate']";
 	String NEXT_BUTTON_NEXT = "//button[.//span[text()= 'Next']]";
 	String BANK_TRANSFER_PAYMENT = "//span[text()='Bank Transfer Payment' ]";
 	String PLACE_ORDER_BANK_TRANSFER_PAYMENT = "//div[@class = 'payment-method _active'][.//span[text()='Bank Transfer Payment' ]]//span[text()= 'Place Order']";
@@ -23,6 +23,7 @@ public class CheckoutPage extends BasePage{
 		actionUtility.click(By.xpath(NEXT_BUTTON_NEXT));
 	}
 	public void clickOnPaymentMethod() {
+		waitUtility.sleep(7);
 		actionUtility.click(By.xpath(BANK_TRANSFER_PAYMENT));
 		actionUtility.click(By.xpath(PLACE_ORDER_BANK_TRANSFER_PAYMENT));
 	}

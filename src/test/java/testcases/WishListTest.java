@@ -7,6 +7,7 @@ import org.testng.annotations.BeforeTest;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
+import io.qameta.allure.Description;
 import pages.HomePage;
 import pages.SignInPage;
 import pages.WishListPage;
@@ -27,6 +28,7 @@ public class WishListTest extends BaseTest{
 		wishListPage = new WishListPage(driver);
 	}
 	@Test(dataProvider = "data_test_valid_Account")
+	@Description("Add product to wish list and verify information of that product whether it correct")
 	public void addProductToWishList(String email, String pass) {
 		homePage.open();
 		if (!signInPage.existWelcomeButton()) {
@@ -42,6 +44,7 @@ public class WishListTest extends BaseTest{
 		}
 	}
 	@Test(dataProvider = "data_test_valid_Account")
+	@Description("There are 3 buttons on wishList page. Check that it works correctly")
 	public void checkButtonWithProduct(String email, String pass) {
 		homePage.open();
 		if (!signInPage.existWelcomeButton()) {
@@ -54,6 +57,7 @@ public class WishListTest extends BaseTest{
 		Assert.assertEquals(wishListPage.checkExistOfButton(),wishListPage.checkExistProduct());
 	}
 	@Test(dataProvider = "name_product")
+	@Description("Remove Product from wish list on")
 	public void removeProductFromWishList(String nameProduct) {
 		Assert.assertEquals(wishListPage.clickRemoveWishList(nameProduct), String.format(MESSAGE_REMOVE_SUCCESS, nameProduct));
 	}

@@ -39,13 +39,21 @@ public class CheckoutTest extends BaseTest {
 	@Test(dataProvider = "data_test_checkout")
 	public void checkout(String email,String pass, String nameProduct1, String nameProduct2, String nameProduct3) {
 		login(email, pass);
+		
 		addProductToCart(nameProduct1);
+		
 		addProductToCart(nameProduct2);
+		
 		addProductToCart(nameProduct3);
+		
 		goToCheckoutShipping();
+		
 		checkoutPage.clickOnShippingMethodTableRate();
+		
 		checkoutPage.clickNextButton();
+		
 		checkoutPage.clickOnPaymentMethod();
+		
 		String currentURL = driver.getCurrentUrl();
 		Assert.assertEquals(currentURL, SUCCESS_URL);
 		checkoutPage.checkNumberOrder();

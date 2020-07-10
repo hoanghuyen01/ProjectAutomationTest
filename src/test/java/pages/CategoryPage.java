@@ -127,14 +127,14 @@ public class CategoryPage extends BasePage {
 	@Step("Click on select icon S size")
 	public void selectSSize(String nameProduct) {
 		actionUtility.click(By.xpath(String.format(XPATH_SIZE_S, nameProduct)));
+		waitUtility.sleep(3);
 	}
-	@Step("Click on select icon Black color size")
+	@Step("Click on select icon Black color")
 	public void selectBlackColor(String nameProduct) {
 		actionUtility.click(By.xpath(String.format(XPATH_COLOR_BLACK, nameProduct)));
 	}
 	@Step("Click on icon add to cart")
 	public void addToCart(String nameProduct) {
-		waitUtility.sleep(6);
 		Actions actions = new Actions(driver);
 		WebElement mainMenu = driver.findElement(By.xpath(String.format(IMG_PRODUCT_LIST, nameProduct)));
 		actions.moveToElement(mainMenu);

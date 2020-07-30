@@ -9,39 +9,40 @@ import io.qameta.allure.Description;
 import pages.SignUpPage;;
 
 public class SignUpTest extends BaseTest {
-	String  MESSAGE_REQUIRE = "This is a required field.";
+	String MESSAGE_REQUIRE = "This is a required field.";
 	SignUpPage signUpPage;
+
 	@BeforeTest
 	public void data() {
 		signUpPage = new SignUpPage(driver);
 	}
+
 	@Test(dataProvider = "data_test_Account")
 	@Description("Test that form signup with required fields: customers miss required input whether error message occur")
-	public void checkRequiredForm(String firstName,String lastName,String email,String pass,String confirmPass) {
+	public void checkRequiredForm(String firstName, String lastName, String email, String pass, String confirmPass) {
 		signUpPage.open();
 		signUpPage.fillDataForm(firstName, lastName, email, pass, confirmPass);
 		if (firstName == "") {
 			Assert.assertEquals(signUpPage.requireFirstName(), MESSAGE_REQUIRE);
-		}else if (lastName == "") {
+		} else if (lastName == "") {
 			Assert.assertEquals(signUpPage.requireLastName(), MESSAGE_REQUIRE);
-		}else if (pass == "") {
+		} else if (pass == "") {
 			Assert.assertEquals(signUpPage.requirePassword(), MESSAGE_REQUIRE);
-		}else if (confirmPass == "") {
+		} else if (confirmPass == "") {
 			Assert.assertEquals(signUpPage.requireConfirmPassword(), MESSAGE_REQUIRE);
-		}else if (email == "") {
+		} else if (email == "") {
 			Assert.assertEquals(signUpPage.requireEmail(), MESSAGE_REQUIRE);
 		}
-		
+
 	}
+
 	@DataProvider(name = "data_test_Account")
-	public static Object[][] dataValidAccountTest(){
-		return new Object[][] {
-			{"","Hoang","lanhoang@gmail.com","Huyen01$","Huyen01$"},
-			{"Lan","","lanhoang@gmail.com","Huyen01$","Huyen01$"},
-			{"Lan","Hoang","","Huyen01$","Huyen01$"},
-			{"Lan","Hoang","lanhoang@gmail.com","","Huyen01$"},
-			{"Lan","Hoang","lanhoang@gmail.com","Huyen01$",""}
-			};
+	public static Object[][] dataValidAccountTest() {
+		return new Object[][] { { "", "Hoang", "lanhoang@gmail.com", "Huyen01$", "Huyen01$" },
+				{ "Lan", "", "lanhoang@gmail.com", "Huyen01$", "Huyen01$" },
+				{ "Lan", "Hoang", "", "Huyen01$", "Huyen01$" },
+				{ "Lan", "Hoang", "lanhoang@gmail.com", "", "Huyen01$" },
+				{ "Lan", "Hoang", "lanhoang@gmail.com", "Huyen01$", "" } };
 	}
-	
+
 }

@@ -48,3 +48,4 @@ target/surefire-reports/testng-failed.xml
 ../../ntuser.dat.LOG2
 ../../ntuser.ini
 ../../scoop/
+/target/

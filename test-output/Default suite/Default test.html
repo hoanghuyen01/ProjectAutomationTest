@@ -57,9 +57,9 @@ function toggleAllBoxes() {
 <tr>
 <td>Tests passed/Failed/Skipped:</td><td>0/1/0</td>
 </tr><tr>
-<td>Started on:</td><td>Tue Jun 30 18:11:28 ICT 2020</td>
+<td>Started on:</td><td>Fri Jul 10 17:47:22 ICT 2020</td>
 </tr>
-<tr><td>Total time:</td><td>30 seconds (30874 ms)</td>
+<tr><td>Total time:</td><td>31 seconds (31195 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -75,15 +75,14 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='testcases.CategoryPageTest.addProductWithOptions()'><b>addProductWithOptions</b><br>Test class: testcases.CategoryPageTest<br>Parameters: Proteus Fitness Jackshirt</td>
-<td><div><pre>org.openqa.selenium.WebDriverException: chrome not reachable
+<td title='testcases.CheckoutTest.checkout()'><b>checkout</b><br>Test class: testcases.CheckoutTest<br>Parameters: huyenhoang@gmail.com, Huyen01$, Neve Studio Dance Jacket, Olivia 1/4 Zip Light Jacket, Nadia Elements Shell</td>
+<td><div><pre>org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element &lt;div class=&quot;swatch-option text&quot; id=&quot;option-label-size-157-item-5595&quot; index=&quot;1&quot; aria-checked=&quot;false&quot; aria-describedby=&quot;option-label-size-157&quot; tabindex=&quot;0&quot; option-type=&quot;0&quot; option-id=&quot;5595&quot; option-label=&quot;...&quot; aria-label=&quot;S&quot; option-tooltip-thumb=&quot;&quot; option-tooltip-value=&quot;S&quot; role=&quot;option&quot; thumb-width=&quot;110&quot; thumb-height=&quot;90&quot;&gt;S&lt;/div&gt; is not clickable at point (970, 621). Other element would receive the click: &lt;div class=&quot;image&quot; style=&quot;background: rgb(0, 0, 0);&quot;&gt;&lt;/div&gt;
   (Session info: chrome=83.0.4103.116)
 Build info: version: &apos;3.14.0&apos;, revision: &apos;aacccce0&apos;, time: &apos;2018-08-02T20:19:58.91Z&apos;
 System info: host: &apos;DESKTOP-50O4S5L&apos;, ip: &apos;192.168.19.36&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_241&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 83.0.4103.116, chrome: {chromedriverVersion: 83.0.4103.39 (ccbf011cb2d2b..., userDataDir: C:\Users\Admin\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:60412}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
-Session ID: f95cc7385950470ad6e1bc9afac039ce
-*** Element info: {Using=xpath, value=//div[@class = &apos;product details product-item-details&apos;][.//a[normalize-space(text())=&apos;Proteus Fitness Jackshirt&apos;]]//div[text()= &apos;S&apos;]}
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 83.0.4103.116, chrome: {chromedriverVersion: 83.0.4103.39 (ccbf011cb2d2b..., userDataDir: C:\Users\Admin\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:49819}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
+Session ID: 3988b7aeef7a47237de86c3a16d5dfae
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
 	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
@@ -94,19 +93,12 @@ Session ID: f95cc7385950470ad6e1bc9afac039ce
 	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
 	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
 	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:548)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElements(RemoteWebDriver.java:349)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementsByXPath(RemoteWebDriver.java:428)
-	at org.openqa.selenium.By$ByXPath.findElements(By.java:348)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElements(RemoteWebDriver.java:310)
-	at org.openqa.selenium.support.ui.ExpectedConditions.findElement(ExpectedConditions.java:895)
-	at org.openqa.selenium.support.ui.ExpectedConditions.access$000(ExpectedConditions.java:44)
-	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:206)
-	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:202)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:260)
-	at utility.WaitUtility.waitUntilVisibility(WaitUtility.java:24)
-	at utility.ActionUtility.click(ActionUtility.java:33)
-	at pages.CategoryPage.selectSSize(CategoryPage.java:119)
-	at testcases.CategoryPageTest.addProductWithOptions(CategoryPageTest.java:65)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:276)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:83)
+	at utility.ActionUtility.click(ActionUtility.java:35)
+	at pages.CategoryPage.selectSSize(CategoryPage.java:129)
+	at testcases.CheckoutTest.addProductToCart(CheckoutTest.java:33)
+	at testcases.CheckoutTest.checkout(CheckoutTest.java:43)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -132,15 +124,14 @@ Session ID: f95cc7385950470ad6e1bc9afac039ce
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-</pre></div><a href='#' onClick='toggleBox("stack-trace41765385", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace41765385'><pre>org.openqa.selenium.WebDriverException: chrome not reachable
+</pre></div><a href='#' onClick='toggleBox("stack-trace940905579", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace940905579'><pre>org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element &lt;div class=&quot;swatch-option text&quot; id=&quot;option-label-size-157-item-5595&quot; index=&quot;1&quot; aria-checked=&quot;false&quot; aria-describedby=&quot;option-label-size-157&quot; tabindex=&quot;0&quot; option-type=&quot;0&quot; option-id=&quot;5595&quot; option-label=&quot;...&quot; aria-label=&quot;S&quot; option-tooltip-thumb=&quot;&quot; option-tooltip-value=&quot;S&quot; role=&quot;option&quot; thumb-width=&quot;110&quot; thumb-height=&quot;90&quot;&gt;S&lt;/div&gt; is not clickable at point (970, 621). Other element would receive the click: &lt;div class=&quot;image&quot; style=&quot;background: rgb(0, 0, 0);&quot;&gt;&lt;/div&gt;
   (Session info: chrome=83.0.4103.116)
 Build info: version: &apos;3.14.0&apos;, revision: &apos;aacccce0&apos;, time: &apos;2018-08-02T20:19:58.91Z&apos;
 System info: host: &apos;DESKTOP-50O4S5L&apos;, ip: &apos;192.168.19.36&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_241&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 83.0.4103.116, chrome: {chromedriverVersion: 83.0.4103.39 (ccbf011cb2d2b..., userDataDir: C:\Users\Admin\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:60412}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
-Session ID: f95cc7385950470ad6e1bc9afac039ce
-*** Element info: {Using=xpath, value=//div[@class = &apos;product details product-item-details&apos;][.//a[normalize-space(text())=&apos;Proteus Fitness Jackshirt&apos;]]//div[text()= &apos;S&apos;]}
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 83.0.4103.116, chrome: {chromedriverVersion: 83.0.4103.39 (ccbf011cb2d2b..., userDataDir: C:\Users\Admin\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:49819}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
+Session ID: 3988b7aeef7a47237de86c3a16d5dfae
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
 	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
@@ -151,19 +142,12 @@ Session ID: f95cc7385950470ad6e1bc9afac039ce
 	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
 	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
 	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:548)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElements(RemoteWebDriver.java:349)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementsByXPath(RemoteWebDriver.java:428)
-	at org.openqa.selenium.By$ByXPath.findElements(By.java:348)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElements(RemoteWebDriver.java:310)
-	at org.openqa.selenium.support.ui.ExpectedConditions.findElement(ExpectedConditions.java:895)
-	at org.openqa.selenium.support.ui.ExpectedConditions.access$000(ExpectedConditions.java:44)
-	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:206)
-	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:202)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:260)
-	at utility.WaitUtility.waitUntilVisibility(WaitUtility.java:24)
-	at utility.ActionUtility.click(ActionUtility.java:33)
-	at pages.CategoryPage.selectSSize(CategoryPage.java:119)
-	at testcases.CategoryPageTest.addProductWithOptions(CategoryPageTest.java:65)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:276)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:83)
+	at utility.ActionUtility.click(ActionUtility.java:35)
+	at pages.CategoryPage.selectSSize(CategoryPage.java:129)
+	at testcases.CheckoutTest.addProductToCart(CheckoutTest.java:33)
+	at testcases.CheckoutTest.checkout(CheckoutTest.java:43)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -190,8 +174,8 @@ Session ID: f95cc7385950470ad6e1bc9afac039ce
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 </pre></div></td>
-<td>24</td>
-<td>testcases.CategoryPageTest@59f99ea</td></tr>
+<td>22</td>
+<td>testcases.CheckoutTest@305f031</td></tr>
 </table><p>
 </body>
 </html>

@@ -3,13 +3,14 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="testcases.CategoryPageTest">
+      <class name="testcases.CheckoutTest">
         <methods>
-          <include name="addProductWithOptions" invocation-numbers="0"/>
-          <include name="initDriver"/>
+          <include name="checkout" invocation-numbers="0"/>
           <include name="data"/>
+          <include name="initDriver"/>
+          <include name="tearDown"/>
         </methods>
-      </class> <!-- testcases.CategoryPageTest -->
+      </class> <!-- testcases.CheckoutTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

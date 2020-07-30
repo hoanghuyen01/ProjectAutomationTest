@@ -8,6 +8,7 @@
           <include name="checkout" invocation-numbers="0"/>
           <include name="data"/>
           <include name="initDriver"/>
+          <include name="tearDown"/>
         </methods>
       </class> <!-- testcases.CheckoutTest -->
     </classes>

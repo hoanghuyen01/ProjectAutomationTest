@@ -12,21 +12,23 @@ import pages.HomePage;
 import pages.SignInPage;
 import pages.WishListPage;
 
-public class WishListTest extends BaseTest{
+public class WishListTest extends BaseTest {
 	String XPATH_PRODUCT_DETAILS = "https://demo.smartosc.com/juno-jacket.html";
-	String URL_WISH_LIST_INDEX ="https://demo.smartosc.com/wishlist/index/index/wishlist_id/";
+	String URL_WISH_LIST_INDEX = "https://demo.smartosc.com/wishlist/index/index/wishlist_id/";
 	String MESSAGE_ADD_WISH_LIST_SUCCESS = "%s has been added to your Wish List. Click here to continue shopping.";
-	String MESSAGE_REMOVE_SUCCESS ="%s has been removed from your Wish List.";
+	String MESSAGE_REMOVE_SUCCESS = "%s has been removed from your Wish List.";
 	String URL_WISHLIST = "https://demo.smartosc.com/wishlist/";
 	WishListPage wishListPage;
 	HomePage homePage;
 	SignInPage signInPage;
+
 	@BeforeTest
 	public void data() {
 		homePage = new HomePage(driver);
 		signInPage = new SignInPage(driver);
 		wishListPage = new WishListPage(driver);
 	}
+
 	@Test(dataProvider = "data_test_valid_Account")
 	@Description("Add product to wish list and verify information of that product whether it correct")
 	public void addProductToWishList(String email, String pass) {
@@ -43,6 +45,7 @@ public class WishListTest extends BaseTest{
 			Assert.assertEquals(wishListPage.checkAddingProductWishList(), message);
 		}
 	}
+
 	@Test(dataProvider = "data_test_valid_Account")
 	@Description("There are 3 buttons on wishList page. Check that it works correctly")
 	public void checkButtonWithProduct(String email, String pass) {
@@ -54,20 +57,23 @@ public class WishListTest extends BaseTest{
 		driver.get(URL_WISHLIST);
 		System.out.println(wishListPage.checkExistOfButton());
 		System.out.println(wishListPage.checkExistProduct());
-		Assert.assertEquals(wishListPage.checkExistOfButton(),wishListPage.checkExistProduct());
+		Assert.assertEquals(wishListPage.checkExistOfButton(), wishListPage.checkExistProduct());
 	}
+
 	@Test(dataProvider = "name_product")
 	@Description("Remove Product from wish list on")
 	public void removeProductFromWishList(String nameProduct) {
-		Assert.assertEquals(wishListPage.clickRemoveWishList(nameProduct), String.format(MESSAGE_REMOVE_SUCCESS, nameProduct));
+		Assert.assertEquals(wishListPage.clickRemoveWishList(nameProduct),
+				String.format(MESSAGE_REMOVE_SUCCESS, nameProduct));
 	}
-	
+
 	@DataProvider(name = "data_test_valid_Account")
-	public static Object[][] dataValidAccountTest(){
-		return new Object[][] {{"huyenhoang@gmail.com","Huyen01$"}};
+	public static Object[][] dataValidAccountTest() {
+		return new Object[][] { { "huyenhoang@gmail.com", "Huyen01$" } };
 	}
+
 	@DataProvider(name = "name_product")
-	public static Object[][] dataProductName(){
-		return new Object[][] {{"Juno Jacket"}};
+	public static Object[][] dataProductName() {
+		return new Object[][] { { "Juno Jacket" } };
 	}
 }

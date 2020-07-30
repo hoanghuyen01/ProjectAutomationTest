@@ -24,7 +24,7 @@
     <div class="top-banner-root">
       <span class="top-banner-title-font">Test results</span>
       <br/>
-      <span class="top-banner-font-1">1 suite</span>
+      <span class="top-banner-font-1">1 suite, 2 failed tests</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -38,7 +38,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" class="navigator-link" panel-name="suite-suite">
-              <span class="suite-name border-passed">suite</span>
+              <span class="suite-name border-failed">suite</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -49,7 +49,7 @@
               <ul>
                 <li>
                   <a href="#" class="navigator-link " panel-name="test-xml-suite">
-                    <span>C:\Users\Admin\eclipse-workspace\FinalAutomationTest\testNG.xml</span>
+                    <span>C:\Users\Admin\eclipse-workspace\AutomationTest\signupNG.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -91,7 +91,26 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">1 method,   1 passed</span>
+                    <span class="method-stats">5 methods, 2 failed,   3 passed</span>
+                  </li>
+                  <li>
+                    <span class="method-list-title failed">Failed methods</span>
+                    <span class="show-or-hide-methods failed">
+                      <a href="#" panel-name="suite-suite" class="hide-methods failed suite-suite"> (hide)</a> <!-- hide-methods failed suite-suite -->
+                      <a href="#" panel-name="suite-suite" class="show-methods failed suite-suite"> (show)</a> <!-- show-methods failed suite-suite -->
+                    </span>
+                    <div class="method-list-content failed suite-suite">
+                      <span>
+                        <img width="3%" src="failed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-suite" title="testcases.SignUpTest" hash-for-method="checkRequiredForm(Lan, , lanhoang@gmail.com, Huyen01$, Huyen01$)">checkRequiredForm(Lan, , lanhoang@gmail.com, Huyen01$, Huyen01$)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="failed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-suite" title="testcases.SignUpTest" hash-for-method="checkRequiredForm(, Hoang, lanhoang@gmail.com, Huyen01$, Huyen01$)">checkRequiredForm(, Hoang, lanhoang@gmail.com, Huyen01$, Huyen01$)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content failed suite-suite -->
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -102,7 +121,17 @@
                     <div class="method-list-content passed suite-suite">
                       <span>
                         <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-suite" title="testcases.LoginTest" hash-for-method="emptyEmail">emptyEmail</a> <!-- method navigator-link -->
+                        <a href="#" class="method navigator-link" panel-name="suite-suite" title="testcases.SignUpTest" hash-for-method="checkRequiredForm(Lan, Hoang, lanhoang@gmail.com, Huyen01$, )">checkRequiredForm(Lan, Hoang, lanhoang@gmail.com, Huyen01$, )</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-suite" title="testcases.SignUpTest" hash-for-method="checkRequiredForm(Lan, Hoang, , Huyen01$, Huyen01$)">checkRequiredForm(Lan, Hoang, , Huyen01$, Huyen01$)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-suite" title="testcases.SignUpTest" hash-for-method="checkRequiredForm(Lan, Hoang, lanhoang@gmail.com, , Huyen01$)">checkRequiredForm(Lan, Hoang, lanhoang@gmail.com, , Huyen01$)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-suite -->
@@ -117,17 +146,66 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-suite" class="panel suite">
-          <div class="suite-suite-class-passed">
+          <div class="suite-suite-class-failed">
             <div class="main-panel-header rounded-window-top">
-              <img src="passed.png"/>
-              <span class="class-name">testcases.LoginTest</span>
+              <img src="failed.png"/>
+              <span class="class-name">testcases.SignUpTest</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="emptyEmail">
-                  </a> <!-- emptyEmail -->
-                  <span class="method-name">emptyEmail</span>
+                  <a name="checkRequiredForm(Lan, , lanhoang@gmail.com, Huyen01$, Huyen01$)">
+                  </a> <!-- checkRequiredForm(Lan, , lanhoang@gmail.com, Huyen01$, Huyen01$) -->
+                  <span class="method-name">checkRequiredForm</span>
+                  <span class="parameters">(Lan, , lanhoang@gmail.com, Huyen01$, Huyen01$)</span>
+                  <div class="stack-trace">java.lang.AssertionError: expected [This is a required field.] but found []
+	at testcases.SignUpTest.checkRequiredForm(SignUpTest.java:28)
+... Removed 34 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="checkRequiredForm(, Hoang, lanhoang@gmail.com, Huyen01$, Huyen01$)">
+                  </a> <!-- checkRequiredForm(, Hoang, lanhoang@gmail.com, Huyen01$, Huyen01$) -->
+                  <span class="method-name">checkRequiredForm</span>
+                  <span class="parameters">(, Hoang, lanhoang@gmail.com, Huyen01$, Huyen01$)</span>
+                  <div class="stack-trace">java.lang.AssertionError: expected [This is a required field.] but found []
+	at testcases.SignUpTest.checkRequiredForm(SignUpTest.java:26)
+... Removed 34 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-suite-class-failed -->
+          <div class="suite-suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">testcases.SignUpTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="checkRequiredForm(Lan, Hoang, lanhoang@gmail.com, Huyen01$, )">
+                  </a> <!-- checkRequiredForm(Lan, Hoang, lanhoang@gmail.com, Huyen01$, ) -->
+                  <span class="method-name">checkRequiredForm</span>
+                  <span class="parameters">(Lan, Hoang, lanhoang@gmail.com, Huyen01$, )</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="checkRequiredForm(Lan, Hoang, , Huyen01$, Huyen01$)">
+                  </a> <!-- checkRequiredForm(Lan, Hoang, , Huyen01$, Huyen01$) -->
+                  <span class="method-name">checkRequiredForm</span>
+                  <span class="parameters">(Lan, Hoang, , Huyen01$, Huyen01$)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="checkRequiredForm(Lan, Hoang, lanhoang@gmail.com, , Huyen01$)">
+                  </a> <!-- checkRequiredForm(Lan, Hoang, lanhoang@gmail.com, , Huyen01$) -->
+                  <span class="method-name">checkRequiredForm</span>
+                  <span class="parameters">(Lan, Hoang, lanhoang@gmail.com, , Huyen01$)</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -135,18 +213,18 @@
         </div> <!-- panel suite -->
         <div panel-name="test-xml-suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">C:\Users\Admin\eclipse-workspace\FinalAutomationTest\testNG.xml</span>
+            <span class="header-content">C:\Users\Admin\eclipse-workspace\AutomationTest\signupNG.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
 &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
 &lt;!DOCTYPE suite SYSTEM &quot;http://testng.org/testng-1.0.dtd&quot;&gt;
 &lt;suite guice-stage=&quot;DEVELOPMENT&quot; verbose=&quot;0&quot; name=&quot;suite&quot;&gt;
-  &lt;test thread-count=&quot;5&quot; verbose=&quot;0&quot; name=&quot;test1&quot;&gt;
+  &lt;test thread-count=&quot;5&quot; verbose=&quot;0&quot; name=&quot;SignUpTest&quot;&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;testcases.LoginTest&quot;/&gt;
+      &lt;class name=&quot;testcases.SignUpTest&quot;/&gt;
     &lt;/classes&gt;
-  &lt;/test&gt; &lt;!-- test1 --&gt;
+  &lt;/test&gt; &lt;!-- SignUpTest --&gt;
 &lt;/suite&gt; &lt;!-- suite --&gt;
             </pre>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -158,7 +236,7 @@
           <div class="main-panel-content rounded-window-bottom">
             <ul>
               <li>
-                <span class="test-name">test1 (1 class)</span>
+                <span class="test-name">SignUpTest (1 class)</span>
               </li>
             </ul>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -184,16 +262,32 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(1);
+data.addRows(5);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'emptyEmail')
-data.setCell(0, 2, 'testcases.LoginTest')
-data.setCell(0, 3, 8130);
+data.setCell(0, 1, 'checkRequiredForm')
+data.setCell(0, 2, 'testcases.SignUpTest')
+data.setCell(0, 3, 310033);
+data.setCell(1, 0, 1)
+data.setCell(1, 1, 'checkRequiredForm')
+data.setCell(1, 2, 'testcases.SignUpTest')
+data.setCell(1, 3, 25347);
+data.setCell(2, 0, 2)
+data.setCell(2, 1, 'checkRequiredForm')
+data.setCell(2, 2, 'testcases.SignUpTest')
+data.setCell(2, 3, 24781);
+data.setCell(3, 0, 3)
+data.setCell(3, 1, 'checkRequiredForm')
+data.setCell(3, 2, 'testcases.SignUpTest')
+data.setCell(3, 3, 16644);
+data.setCell(4, 0, 4)
+data.setCell(4, 1, 'checkRequiredForm')
+data.setCell(4, 2, 'testcases.SignUpTest')
+data.setCell(4, 3, 7709);
 window.suiteTableData['suite']= { tableData: data, tableDiv: 'times-div-suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 8 seconds</span>
+              <span class="suite-total-time">Total running time: 6 minutes</span>
               <div id="times-div-suite">
               </div> <!-- times-div-suite -->
             </div> <!-- times-div -->
@@ -219,22 +313,42 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">testcases.LoginTest</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">testcases.SignUpTest</div> <!-- chronological-class-name -->
               <div class="configuration-test before">
                 <span class="method-name">initDriver</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-test before -->
               <div class="configuration-test before">
                 <span class="method-name">data</span>
-                <span class="method-start">6068 ms</span>
+                <span class="method-start">7628 ms</span>
               </div> <!-- configuration-test before -->
               <div class="test-method">
-                <span class="method-name">emptyEmail</span>
-                <span class="method-start">6079 ms</span>
+                <img src="failed.png">
+                </img>
+                <span class="method-name">checkRequiredForm(, Hoang, lanhoang@gmail.com, Huyen01$, Huyen01$)</span>
+                <span class="method-start">7658 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">checkRequiredForm(Lan, , lanhoang@gmail.com, Huyen01$, Huyen01$)</span>
+                <span class="method-start">317772 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">checkRequiredForm(Lan, Hoang, , Huyen01$, Huyen01$)</span>
+                <span class="method-start">342556 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">checkRequiredForm(Lan, Hoang, lanhoang@gmail.com, , Huyen01$)</span>
+                <span class="method-start">350266 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">checkRequiredForm(Lan, Hoang, lanhoang@gmail.com, Huyen01$, )</span>
+                <span class="method-start">375615 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-test after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">14211 ms</span>
+                <span class="method-start">392262 ms</span>
               </div> <!-- configuration-test after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

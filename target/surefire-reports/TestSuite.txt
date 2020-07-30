@@ -1,4 +1,12 @@
 -------------------------------------------------------------------------------
 Test set: TestSuite
 -------------------------------------------------------------------------------
-Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 15.195 sec - in TestSuite
+Tests run: 5, Failures: 2, Errors: 0, Skipped: 0, Time elapsed: 394.323 sec <<< FAILURE! - in TestSuite
+checkRequiredForm(testcases.SignUpTest)  Time elapsed: 310.066 sec  <<< FAILURE!
+java.lang.AssertionError: expected [This is a required field.] but found []
+	at testcases.SignUpTest.checkRequiredForm(SignUpTest.java:26)
+
+checkRequiredForm(testcases.SignUpTest)  Time elapsed: 24.782 sec  <<< FAILURE!
+java.lang.AssertionError: expected [This is a required field.] but found []
+	at testcases.SignUpTest.checkRequiredForm(SignUpTest.java:28)
+
